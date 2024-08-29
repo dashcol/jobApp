@@ -1,0 +1,19 @@
+<div class="job-container">
+<%jobs.forEach(e => {%>
+    
+    <div class="jobs">
+        <div class="bg"></div>
+        <div class="blob"></div>
+        <img src="<%=e.image%>">
+        <h2><%=e.cname%></h2>
+        <ul>
+            <li><%=e.role%></li>
+            <li><%=e.exp%></li>
+            <li><%=e.pack%></li>
+            <li><%=e.date%></li>
+            <a  href="/view/<%=e.no%>"><button class="button"><span>view</span></button></a>
+        </ul>
+    </div>
+
+<%})%>
+</div>

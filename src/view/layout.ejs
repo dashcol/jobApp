@@ -1,0 +1,24 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>jobFetch</title>
+   </head>
+   <body>
+    <nav class="nav">
+        <div class="logo"><h1>jobFetch</h1></div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <!-- <li><a href="'/">Search</a></li> -->
+            <% if(locals.userEmail){%>
+                <li><a href="/logout">Logout</a></li>
+            <%}%>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+    <%-body%>
+   </body>
+   </html> 

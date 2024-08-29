@@ -1,0 +1,24 @@
+<%if(errorMessage){%>
+    <div style="background-color: red;">
+     <%=errorMessage%>
+    </div>
+    <%}%>
+    <div class="login-register">
+        <div class="container-log">
+            <form action="/register" method="post">
+                <h1>REGISTER</h1>
+
+                <label for="name">Name</label>
+                <input type="text" name="name">
+
+
+                <label for="email">Email or phone</label>
+                <input type="email" name="email">
+    
+                <label for="password">Password</label>
+                <input type="password" name="password">
+
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </div>

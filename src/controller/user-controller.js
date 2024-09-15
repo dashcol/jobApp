@@ -12,12 +12,13 @@ export default class Jobcontroller{
     postLogin(req,res){
         const {email,password}=req.body;
        const user=userData.validateUser(email,password);
+       const userIsRecruiter = req.session.userType == 'recruiter'; 
        if(!user){
         return res.render('login',{errorMessage:'Invalid Credentials'})
        }
        req.session.userEmail=email;
        var jobs=jobData.jobsData();
-       res.render('jobs',{jobs,userEmail:req.session.userEmail});
+       res.render('jobs',{jobs,userEmail:req.session.userEmail,userIsRecruiter});
     }
 
 

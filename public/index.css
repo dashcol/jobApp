@@ -20,6 +20,15 @@ h1 {
     justify-content: space-between;
     align-items: center;
 }
+.nav a{
+    color: #fff;
+    text-decoration: none;
+   
+}
+.nav a h2{
+    position: relative;
+    right:450px;
+}
 
 .nav .logo h1 {
     margin: 0;
@@ -39,6 +48,7 @@ h1 {
     text-decoration: none;
     font-weight: bold;
     position: relative;
+    /* left:100px; */
 }
 
 .nav .nav-links a:hover {
@@ -409,4 +419,122 @@ div[style*="background-color: red;"] {
         width: 90%;
         padding: 20px;
     }
+}
+
+
+.contain{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+.extra-links {
+    text-align: center;
+    margin-top: 15px;
+}
+.extra-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+.register-form{
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #218838;
+}
+.error {
+    color: red;
+    margin-bottom: 10px;
 }

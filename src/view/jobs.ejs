@@ -12,6 +12,12 @@
             <li><%=e.pack%></li>
             <li><%=e.date%></li>
             <a  href="/view/<%=e.no%>"><button class="button"><span>view</span></button></a>
+            <% if (userIsRecruiter) { %>
+                <a href="/jobs/edit/<%= e.no %>"><button class="button"><span>Edit</span></button></a>
+                <form action="/jobs/delete/<%= e.no %>" method="POST" style="display:inline;">
+                    <button class="button" onclick="return confirm('Are you sure you want to delete this job?')"><span>Delete</span></button>
+                </form>
+            <% } %>
         </ul>
     </div>
 

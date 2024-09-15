@@ -9,6 +9,9 @@ import session from 'express-session';
 import Jobcontroller from './src/controller/user-controller.js';
 import Usercontroller from './src/controller/controller.js';
 import { auth } from './src/middleware/auth.js';
+import RecuriterController from './src/controller/recuriter-controller.js';
+import { recruiterOnly } from './src/middleware/job-edit.js';
+import JobController from './src/controller/job-controller.js';
 
 const app =express();
 
@@ -32,6 +35,8 @@ app.use(cookieParser());
 
 const jobController=new Jobcontroller();
 const userController=new Usercontroller();
+const recuriterController=new RecuriterController();
+const jobhandling= new JobController();
 
 app.get('/',auth,userController.data)
 
@@ -44,6 +49,16 @@ app.get('/register',jobController.getRegister)
 app.post('/register',jobController.postRegister)
 
 app.get('/logout',jobController.logout)
+
+app.get('/recuriter',recuriterController.recuLogin)
+app.get('/recu-register',recuriterController.recuRegister)
+app.post('/recuriter',recuriterController.postLogin)
+app.post('/recu-register',recuriterController.postRegister)
+
+
+app.post('/edit/:id', recruiterOnly, jobhandling.editJob);
+app.post('/delete/:id', recruiterOnly, jobhandling.deleteJob);
+
 
 
 app.listen(3100,()=>{
